@@ -1,0 +1,15 @@
+
+
+This functionality is in 2 parts : 
+
+- StapsDown_1.py : reads on-prem the STAP status report , enriches it and writes it in ES on-prem
+      - this includes via Kibana dashboards detection of :
+		- Staps not in the inventory (cmdb)
+		- 
+- StapsDown_2.py : generates data on Staps Down, 
+	- Generates a list to be taken under Discover for listing the Staps by time ranking. Very visual
+        - (will) generate a list of staps declared in the inventory (cmdb) but not reporting into guardium
+
+
+
+

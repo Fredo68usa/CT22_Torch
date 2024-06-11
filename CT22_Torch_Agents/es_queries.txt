@@ -1,0 +1,110 @@
+query = {
+    "query": {
+        "bool": {
+            "must": [
+                {
+                    "match": {
+                        "field_name": "field_value"
+                    }
+                },
+                {
+                    "nested": {
+                        "path": "nested_field_name",
+                        "query": {
+                            "match": {
+                                "nested_field_name.nested_field_value": "nested_field_value"
+                            }
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}
+
+query = {
+    "query": {
+        "bool": {
+            "must": [
+                {
+                    "match": {
+                        "field_name": "field_value"
+                    }
+                },
+                {
+                    "range": {
+                        "date_field_name": {
+                            "gte": "2023-01-01",
+                            "lte": "2023-12-31"
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}
+
+query = {
+    "query": {
+        "bool": {
+            "must": [
+                {
+                    "match": {
+                        "field_name": "field_value"
+                    }
+                },
+                {
+                    "range": {
+                        "other_field_name": {
+                            "gte": 10,
+                            "lte": 20
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}
+
+query = {
+    "query": {
+        "bool": {
+            "must": [
+                {
+                    "match": {
+                        "field_name": "field_value"
+                    }
+                },
+                {
+                    "match": {
+                        "_type": "document_type"
+                    }
+                }
+            ]
+        }
+    }
+}
+
+query = {
+    "query": {
+        "match": {
+            "field_name": "field_value"
+        }
+    }
+}
+
+# Getting back only certain fields
+# --------------------------------
+query = {
+    "query": {
+        "match_all": {}
+    },
+    "_source": ["title", "author"]
+}
+
+query = {
+    "query": {
+        "match_all": {}
+    },
+    "_source_excludes": ["content"]
+}

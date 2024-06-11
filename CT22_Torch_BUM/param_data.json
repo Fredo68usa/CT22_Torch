@@ -1,0 +1,8 @@
+{
+"path": "/home/context22/Context22/CT22_DAM_Data/Torch/BUM/ToBeProcessed/",
+"pathProcessed" :"/home/context22/Context22/CT22_DAM_Data/Torch/BUM/Processed/",
+"ESServer" : "http://localhost:9200",
+"ESUser" : "elastic",
+"ESPwd" : "6ycdFAhDBE2QbcRfPxQV",
+"index" : "ct22-enrich_buff"
+}
